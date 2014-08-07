@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
       if auth['info']
          user.name = auth['info']['name'] || ""
       end
+      user.customer_number = auth.extra['customer_number']
     end
   end
 
